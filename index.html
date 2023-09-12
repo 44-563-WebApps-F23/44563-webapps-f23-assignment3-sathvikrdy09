@@ -2,11 +2,10 @@
 <html>
     <head>
         <title>Web Applications</title>
+        <style>table,th,tb{border:1px solid mediumvioletred;}</style>
     </head>
     <body>
         <h1>Sathvik Reddy</h1>
-    </body>
-</html>
 <h2>Kerala</h2>
 <b>kerala</b> is called as <b>god's own country</b>
 <h3>Ordered List</h3>
@@ -23,3 +22,58 @@
 </UL>
 <a href="file:///C:/Users/S566920/Desktop/WebApps%20Repos/firstrepo/44563-webapps-f23-assignment3-sathvikrdy09/mystats.html">Link to my stats</a>
 <hr>
+<p>Here is the table of sports and their reason to play</p>
+<table>
+    <tr>
+        <th>Sport</th>
+        <th>Reason</th>
+        <th>average hours</th>
+    </tr>
+    <tr>
+        <td>Swimming</td>
+        <td>Improves Flexiability</td>
+        <td>3hours</td> 
+    </tr>
+    <tr>
+        <td>Cricket</td>
+        <td>Improves team work</td>
+        <td>5hours</td>
+    </tr>
+    <tr>
+        <td>Volley Ball</td>
+        <td>Good CoOrdination</td>
+        <td>2hours</td>
+    </tr>
+    <tr>
+        <td>Yoga</td>
+        <td>It helpss to manage stress</td>
+        <td>1hour</td>
+    </tr>
+</table>
+<hr>
+<h5>Code Snippet</h5>
+<blockquote cite="https://css-tricks.com/snippets/php/basic-database-connection-random-query-display-result//">Here is the php code for CSS</blockquote>
+<pre>
+    <code>
+        <?php
+
+$hostname = 'localhost';
+$user = 'username';
+$pass = 'password';
+$database = 'database_name';
+
+$db_connection = new PDO( "mysql:host=" . $hostname . ";dbname=" . $database, $user, $pass );
+
+$results = $db_connection->query( 'SELECT testimonial, author FROM recommendations WHERE 1 ORDER by rand() LIMIT 1' );
+
+foreach ( $results as $row ) {
+	echo '<p id="quote">' . $row['testimonial'] . '</p>';
+	echo '<p id="author">&ndash;' . $row['author'] . '</p>';
+}
+
+// Close the connection
+$db_connection = null;
+    </code>
+</pre>
+</body>
+</html>
